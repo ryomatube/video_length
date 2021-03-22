@@ -5,11 +5,14 @@
   </head>
   <body>
     <p id="1"></p>
+    <p id="2"></p>
     <script type="text/javascript" >
       var url = window.location.search.slice(1);
       var video = document.createElement("video")
       var element = document.getElementById("1");
+      var element2 = document.getElementById("2");
       video.src = url;
+      element2.innerHTML = url;
       video.addEventListener('loadedmetadata', function() {
           element.innerHTML = video.duration;
           console.log(video.duration);
