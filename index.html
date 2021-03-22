@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+  </head>
+  <body>
+    <p id="1"></p>
+    <script type="text/javascript" >
+      var url = window.location.search.slice(1);
+      var video = document.createElement("video")
+      var element = document.getElementById("1");
+      video.src = url;
+      video.addEventListener('loadedmetadata', function() {
+          element.innerHTML = video.duration;
+          console.log(video.duration);
+      });
+    </script>
+  </body>
+</html>
